@@ -1,0 +1,40 @@
+/*
+Template Name: Mugi
+Version: 1.0
+Author: PxlSolutions
+Author URI: http://themeforest.net/user/pxlsolutions
+Description: Personal Portfolio & Resume HTML Template
+
+[TABLE OF CONTENTS]
+
+01. Base
+02. Typography
+03. Preloader
+04. Header
+05. Sections
+06. Skills
+07. Portfolio
+08. Facts
+09. Prices
+10. Testimonials
+11. Blog
+12. Clients
+13. Helper
+14. Dark Mode
+15. Buttons
+16. Bootstrap Components
+17. Theme elements
+18. Slick
+19. Responsive
+
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:400,400i,600,600i,700,700i,800,800i');
+@import "sass/mixins";
+@import "sass/base";
+@import "sass/header";
+@import "sass/main";
+@import "sass/dark";
+@import "sass/buttons";
+@import "sass/elements";
+@import "sass/slick";
+@import "sass/responsive";
