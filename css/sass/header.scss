@@ -1,0 +1,224 @@
+/*=================================================================*/
+/*                      HEADER                              
+/*=================================================================*/
+header.desktop-header {
+	background: #FFF;
+	border-right: solid 1px #ececec;
+	padding: 40px;
+	position: fixed;
+	left: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 100vh;
+	min-height: 100vh;
+	top: 0;
+	width: 230px;
+	z-index: 1;
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+	@include transition(.3s);
+	&.open {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+		transform: translateX(0);
+	}
+	.site-logo {
+		
+	}
+	.site-title {
+		font-size: 24px;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+	/* === Vertical Menu === */
+	.vertical-menu {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	.vertical-menu li.openmenu>a {
+		color: #000;
+	}
+	.vertical-menu li.openmenu .switch {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	.vertical-menu li {
+		padding: 8px 0;
+		position: relative;
+		list-style: none;
+		@include transition(.2s);
+	}
+	.vertical-menu li .switch {
+		font-size: 30px;
+		display: inline-block;
+		padding: 0 14px;
+		line-height: 1;
+		cursor: pointer;
+		color: #000;
+		position: absolute;
+    	top: 24px;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		-webkit-backface-visibility: hidden;
+	}
+	.vertical-menu li a {
+		color: #000;
+		font-family: $fonthead;
+		font-size: 14px;
+		font-weight: 700;
+		width: 100%;
+		text-transform: uppercase;
+		text-decoration: none;
+		position: relative;
+		&:after {
+			content: '';
+			background: $colorpurple;
+		    width: 100%;
+		    height: 0;
+		    left: 1px;
+		    opacity: .5;
+		    bottom: 0;
+		    position: absolute;
+		    z-index: -1;
+		    @include transition(.3s);
+		}
+		&:hover {
+			&:after {
+				height: 7px;
+			}
+		}
+		&.nav-link {
+		    display: initial;
+		    padding: 0;
+		}
+	}
+	.vertical-menu li .nav-link.active {
+		&:after {
+			content: '';
+			background: $colorpurple;
+		    width: 100%;
+		    height: 7px;
+		    left: 1px;
+		    opacity: .5;
+		    bottom: 0;
+		    position: absolute;
+		    z-index: -1;
+		}
+	}
+	/* === Submenu === */
+
+	.submenu {
+		display: none;
+		padding: 0;
+	}
+	.submenu li a {
+		color: #000;
+		font-size: 18px;
+		font-weight: 700;
+		&:after {
+			height: 3px;
+		}
+		&:hover:after {
+			width: 100%;
+			height: 3px;
+		}
+	}
+	.submenu li a:hover {
+		color: #000;
+	}
+	.footer {
+		margin-top: auto;
+	}
+	.social-icons {
+		li:not(:last-child) {
+		    margin-right: 1.2rem;
+		}
+		li {
+			a {
+				&:hover {
+					color: $colorpurple;
+				}
+			}
+		}
+	}
+	.copyright {
+		color: #999;
+		font-size: 14px;
+	}
+}
+
+header.mobile-header {
+	background: #FFF;
+	border-bottom: solid 1px #ececec;
+	display: none;
+	padding: 10px 0;
+	@include transition(.3s);
+	&.open {
+		-webkit-transform: translateX(230px);
+		-moz-transform: translateX(230px);
+		-ms-transform: translateX(230px);
+		-o-transform: translateX(230px);
+		transform: translateX(230px);
+	}
+	.menu-icon {
+		button {
+			background: transparent;
+			border: 0;
+			cursor: pointer;
+			outline: 0;
+		    height: 33px;
+    		width: 33px;
+		}
+		span {
+			display: block;
+			background: #000;
+			height: 4px;
+			position: relative;
+			width: 20px;
+			&:before {
+				content: '';
+				display: block;
+				background: #000;
+				height: 4px;
+				top: -10px;
+    			position: absolute;
+				width: 30px;
+			}
+			&:after {
+				content: '';
+				display: block;
+				background: #000;
+				height: 4px;
+				top: 10px;
+    			position: absolute;
+				width: 10px;
+			}
+		}
+	}
+	.site-logo {
+    	max-height: 50px;
+	    max-width: 50px;
+	    display: inline-block;
+	}
+	.site-title {
+		font-size: 18px;
+		font-weight: 900;
+		text-transform: uppercase;
+		display: inline-block;
+	}
+}

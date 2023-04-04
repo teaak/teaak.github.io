@@ -1,0 +1,228 @@
+/*=================================================================*/
+/*                      BASE                              
+/*=================================================================*/
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+    color: #888;
+    background-color: #fff;
+    font-family: $fontstack;
+    font-size: 16px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.relative {
+    position: relative;
+}
+
+/*=================================================================*/
+/*                      TYPOGRAPHY                              
+/*=================================================================*/
+h1,h2,h3,h4,h5,h6 {
+    color: #000;
+    font-family: $fonthead;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+a {
+    color: #000;
+    outline: 0;
+    @include transition(.3s);
+    &:hover {
+        color: $colorpurple;
+        text-decoration: none;
+    }
+    &:focus {
+        outline: 0;
+    }
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+blockquote {
+    padding: 20px 20px;
+    margin: 0 0 20px;
+    font-size: 16px;
+    background: #F7F7F7;
+    border-radius: 10px;
+}
+
+blockquote p {
+    line-height: 1.6;
+}
+
+/* === Pre === */
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 0;
+}
+
+ul.styled {
+    list-style: none;
+    li {
+        &:before {
+            content: '';
+            background: $colorpurple;
+            display: inline-block;
+            height: 5px;
+            margin-right: 20px;
+            vertical-align: middle;
+            width: 5px;
+        }
+    }
+}
+
+/*=================================================================*/
+/*                      PRELOADER                              
+/*=================================================================*/
+.mugi-folding-cube {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.mugi-folding-cube .mugi-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.mugi-folding-cube .mugi-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $colorpurple;
+    -webkit-animation: mugi-foldCubeAngle 2.4s infinite linear both;
+          animation: mugi-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.mugi-folding-cube .mugi-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.mugi-folding-cube .mugi-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.mugi-folding-cube .mugi-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.mugi-folding-cube .mugi-cube2:before {
+    -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.mugi-folding-cube .mugi-cube3:before {
+    -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.mugi-folding-cube .mugi-cube4:before {
+    -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes mugi-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+    } 
+}
+
+@keyframes mugi-foldCubeAngle {
+    0%, 10% {
+        -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+    } 25%, 75% {
+        -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+    } 90%, 100% {
+        -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+    }
+}
+
+#preloader {
+    background: #FFF;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    .outer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

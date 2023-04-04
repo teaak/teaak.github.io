@@ -1,0 +1,10 @@
+$fonthead: 'Montserrat', sans-serif;
+$fontstack: 'Lato', sans-serif;
+$colordefault: #000;
+$colorpurple: #9013FE;
+
+@mixin transition($second) {
+  -webkit-transition: all $second ease-in-out;
+    -moz-transition: all $second ease-in-out;
+        transition: all $second ease-in-out;
+}

@@ -1,0 +1,132 @@
+/*=================================================================*/
+/*                      RESPONSIVE SETTINGS
+/*=================================================================*/
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.price-item {
+	    padding: 40px 30px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and  (min-width: 991px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+	header.desktop-header {
+		-webkit-transform: translateX(-230px);
+		-moz-transform: translateX(-230px);
+		-ms-transform: translateX(-230px);
+		-o-transform: translateX(-230px);
+		transform: translateX(-230px);
+	}
+	header.mobile-header {
+		display: block;
+	}
+	main.content {
+		margin-left: 0;
+	}
+	section.home {
+		padding: 300px 0;
+	}
+	.portfolio-filter {
+		display: none;
+	}
+	.portfolio-item, .blog-item {
+		max-width: 360px;
+		margin: auto;
+	}
+	.blog-wrapper {
+		margin: -50px 0;
+		.blog-item {
+			margin-top: 25px;
+			margin-bottom: 25px;
+		}
+	}
+	section.home .cta h1 {
+	    font-size: 52px;
+	}
+	section.home .cta p {
+	    font-size: 18px;
+	}
+	.pf-filter-wrapper {
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	
+}
+
+@media only screen and (max-width: 576px) {
+	.portfolio-info {
+		li {
+			display: block;
+			padding: 5px 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 360px) {
+
+}
+
+@media only screen and (max-width: 320px) {
+
+}
+
+@media (min-width: 1200px) {
+	.container {
+	    max-width: 920px;
+	}
+}
+
+@media (min-width: 1366px) {
+	.container {
+	    max-width: 1080px;
+	}
+}
+
+@media (min-width: 1600px) {
+	header.desktop-header {
+	    padding: 40px 60px;
+		width: 300px;
+	}
+	main.content {
+		margin-left: 300px;
+	}
+	.price-item {
+		padding: 40px 70px;
+	}
+}
+
+// height
+@media only screen and (max-height: 500px) {
+	header.desktop-header .footer, header.mobile-header .footer {
+		margin-top: 100px;
+	}
+	.scroll-down {
+		display: none;
+	}
+}

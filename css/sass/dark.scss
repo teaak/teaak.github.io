@@ -1,0 +1,48 @@
+/*=================================================================*/
+/*                      DARK MODE                              
+/*=================================================================*/
+body.dark {
+	background: #000;
+	color: #888;
+	header, .btn-default:before, #preloader {
+		background: #000;
+	}
+	header, section, .fact-item, .price-item, .client-item, .form-control {
+		border-color: #222;
+	}
+	h1, h2, h3, h4, h5, h6, a, .vertical-menu li a, .portfolio-filter li.current, .portfolio-filter li:hover, .portfolio-info li strong, .social-share .share-text {
+		color: #FFF;
+	}
+	a {
+		&:hover {
+			color: $colorpurple;
+		}
+	}
+	.mouse {
+		border-color: #FFF;
+	}
+	.mouse .wheel, header.mobile-header .menu-icon span, header.mobile-header .menu-icon span:before, header.mobile-header .menu-icon span:after {
+		background: #FFF;
+	}
+	.timeline span.line {
+		background: #222;
+	}
+	.slick-dots li.slick-active button:before {
+	    background: $colorpurple;
+	}
+	.slick-dots li button:before {
+	    background: rgba(255, 255, 255, 0.8);
+	}
+	.form-control {
+		background-color: transparent;
+	}
+	header.desktop-header .vertical-menu li .nav-link.active:after, header.desktop-header .vertical-menu li a:after, .portfolio-filter li.current:after, .portfolio-filter li:after {
+		opacity: 1;
+	}
+	#return-to-top {
+	    background: rgba(255, 255, 255, 0.2);
+	    &:hover {
+	    	background: $colorpurple;
+	    }
+   	}
+}
